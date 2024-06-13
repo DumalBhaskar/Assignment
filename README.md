@@ -10,3 +10,4 @@ TOOLS USED: Docker, Docker-compose, Github, Github Actions and Packages.
 
 ![output](output.png)
 
+![ci pipeline](ci.png)
