@@ -1,5 +1,5 @@
 # Stage 1: Build Stage
-FROM node:18-alpine AS build
+FROM node:18 AS build
 
 WORKDIR /app
 
@@ -16,13 +16,21 @@ COPY . .
 RUN npm run build
 
 # Stage 2: Production Stage
-FROM nginx:alpine
+FROM node:18-alpine
 
-# Copy the build output from the previous stage
-COPY --from=build /app/.next /usr/share/nginx/html
+WORKDIR /app
 
-# Expose the port
-EXPOSE 80
+# Copy only the necessary files from the build stage
+COPY --from=build /app/package*.json ./
+COPY --from=build /app/.next ./.next
+COPY --from=build /app/public ./public
+COPY --from=build /app/node_modules ./node_modules
 
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+# Set environment variables
+ENV PORT 3000
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Start the Next.js application
+CMD ["npm", "start"]
