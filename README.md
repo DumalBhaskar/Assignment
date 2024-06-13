@@ -8,6 +8,8 @@
 
 TOOLS USED: Docker, Docker-compose, Github, Github Actions and Packages.
 
+## Application Output
 ![output](output.png)
 
+## CI Pipeline
 ![ci pipeline](ci.png)
