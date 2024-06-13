@@ -26,7 +26,7 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: ghcr.io/dumalbhaskar/assignment/frontend:v1.0
+          tags: ghcr.io/dumalbhaskar/assignment/frontend:v2.0
 
       - name: Build and push backend Docker image
         uses: docker/build-push-action@v4
