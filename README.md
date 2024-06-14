@@ -10,11 +10,12 @@ Docker, Docker-compose, Github, Github Actions and Packages.
 
 
 How to run the project:
+
 1.Open terminal, clone the repository using below command
 ```shell
- 
+ https://github.com/DumalBhaskar/Assignment.git
 ```  
-1. Enter the below command to run the docker-compose file
+2. Enter the below command to run the docker-compose file
 ```shell
  docker compose up -d
 ```  
