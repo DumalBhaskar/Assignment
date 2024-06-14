@@ -3,11 +3,17 @@
 * Author: Bhaskar Dumal
 * Date: 13 June, 2024
 * Email: dumalbhaskar@gmail.com
+  
 
 TOOLS USED: 
 Docker, Docker-compose, Github, Github Actions and Packages.
 
+
 How to run the project:
+1.Open terminal, clone the repository using below command
+```shell
+ 
+```  
 1. Enter the below command to run the docker-compose file
 ```shell
  docker compose up -d
